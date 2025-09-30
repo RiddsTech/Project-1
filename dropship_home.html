@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asapdropship home page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root {
+            --font-family: 'Ebrima';
+            --margin: 80px;
+            --font-size: 15px;
+            --font-color: #FF1E2A;
+            --text-color: rgb(255, 217, 0);
+        }
+
+        * {
+            padding: 0;
+            margin: auto;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .logo {
+            display: grid;
+            justify-items: center;
+        }
+
+        #asap {
+            margin-top: 10px;
+            width: 100px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 3px 0px;
+            gap: 150px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .logo2 {
+            float: left;
+            cursor: pointer;
+        }
+
+        #logo-2 {
+            font-family: var(--font-family);
+            font-size: 20px;
+        }
+
+        #red-logo {
+            color: var(--font-color);
+            font-size: 30px;
+        }
+
+        .page {
+            text-decoration: none;
+            color: #494441;
+            font-weight: bold;
+            margin-right: 30px;
+            transition: 1s ease;
+        }
+
+        .page:hover {
+            color: var(--text-color);
+            transition: .5s ease-in-out;
+        }
+
+        .btn1 {
+            padding: 15px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            width: 120px;
+            background: rgb(187, 187, 187);
+            transition: .5s ease;
+        }
+
+        .btn1:hover {
+            background: var(--text-color);
+            transition: .5s ease-in-out;
+        }
+
+        .front {
+            background-image: url(img/drop2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: fixed;
+            height: 600px;
+            padding: 20px;
+        }
+
+        .open-text {
+            margin: 80px 0px 0px 80px;
+            width: 750px;
+            line-height: 85px;
+        }
+
+        #small-top {
+            font-size: 60px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        #big-top {
+            font-size: 100px;
+            color: var(--text-color);
+        }
+
+        .btn2 {
+            text-decoration: none;
+            width: 80px;
+            padding: 15px;
+            background-color: var(--font-color);
+            color: #fff;
+            font-family: var(--font-family);
+            transition: 1s ease;
+        }
+
+        .btn2:hover {
+            background: #8f080f;
+            transition: 1s ease-in-out;
+        }
+
+        #info {
+            line-height: 25px;
+            margin: 50px 0px 0px 20px;
+            width: 400px;
+            font-family: var(--font-family);
+            color: #fff;
+            font-size: 17px;
+            animation-name: zoom;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: 1s ease;
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #info-head {
+            font-weight: bold;
+            font-size: 30px;
+            color: var(--font-color);
+        }
+
+        .offer {
+            display: grid;
+            justify-items: center;
+            background: gray;
+            padding: 20px;
+            height: 350px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .ideal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1070px;
+            padding: 0;
+        }
+
+        #mid-text {
+            font-family: var(--font-family);
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        .contain {
+            width: 230px;
+            height: 110px;
+            font-family: var(--font-family);
+            background: #fff;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 60px;
+            box-shadow: 0px 4px 16px 0px #505050bd;
+            cursor: pointer;
+            transition: .5s ease;
+            text-align: center;
+        }
+
+        .contain:hover {
+            transform-origin: left;
+            /* transform: scale(1.05); */
+            transition: 1s ease-in-out;
+            background: #FFFBD6;
+        }
+
+        #icon {
+            margin-right: -10px;
+        }
+
+        .icons {
+            display: flex;
+            margin-bottom: 10px;
+            /* align-items: left;
+            justify-content: left; */
+        }
+
+        #contain-head {
+            font-size: 15px;
+        }
+
+        footer {
+            display: grid;
+            justify-items: center;
+            background: #494441;
+            padding: 0px;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            margin-top: -30px;
+        }
+
+        .bottom-block {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            gap: 60px;
+            width: 1075px;
+            margin: 30px 0 0 0;
+        }
+
+        .links {
+            width: 250px;
+        }
+
+        #quick {
+            font-size: 18px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        ul li {
+            list-style: none;
+            line-height: 30px;
+            color: var(--text-color);
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        .social {
+            width: 150px;
+            line-height: 30px;
+        }
+
+        #social-text {
+            text-decoration: none;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: .5s ease;
+        }
+
+        #social-text:hover {
+            color: #fff;
+            transition: .5s ease-in-out;
+        }
+
+        #me {
+            color: #fff;
+        }
+
+        #message-box {
+            width: 250px;
+            height: 20px;
+            resize: none;
+            border: none;
+            outline: none;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-me {
+            padding: 12px;
+            border-radius: 15px;
+            width: 80px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h6 {
+            margin-top: 40px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HOME PAGE -->
+    <div class="home-page">
+        <div class="logo">
+            <img src="img/ASAP logo.png" alt="our logo" id="asap">
+        </div>
+
+        <!-- Navigation section starts -->
+        <nav>
+            <div class="logo2">
+                <h5 id="logo-2"><span id="red-logo">A.S.A.P</span>dropship</h5>
+            </div>
+            <div class="menu">
+                <a href="dropship_home.html" class="page">Home</a>
+                <a href="dropship_about.html" class="page">About Us</a>
+                <a href="dropship_collect.html" class="page">Collections</a>
+                <a href="dropship_login.html" class="page">Login</a>
+                <a href="dropship_register.html" class="page">Register</a>
+                <button type="submit" class="btn1">Contact us</button>
+            </div>
+        </nav>
+        <!-- Navigation section ends -->
+
+        <!-- Main Page starts -->
+        <div class="front">
+            <div class="open-text">
+                <h3 id="small-top">An OPENED</h3>
+                <h2 id="big-top">Collection</h2>
+                <h3 id="small-top">of Unlimited BRANDS</h3>
+                <a href="#" class="btn2">Lets Get Started...</a>
+
+                <p id="info">
+                    <span id="info-head">>Mini Stores</span><br>
+                    Fast and urgent deliveries will be delivered to our mini stores
+                    globally for better and satisfactory delivery services.
+                </p>
+            </div>
+        </div>
+        <!-- Main page ends -->
+
+        <!-- THe Elites start -->
+        <div class="offer">
+            <h2 id="mid-text">OUR ELITES</h2>
+            <div class="ideal">
+                <div class="contain">
+                    <div class="icons">
+                        <i class="fa fa-gear" id="icon"></i>
+                        <h3 id="contain-head">Fast Shipping</h3>
+                    </div>
+                    Get quick and fast shipment of good from days
+                    to mere minutes at affordable prices.
+                </div>
+
+                <div class="contain">
+                    <div class="icons">
+                        <i class="fa fa-check" id="icon"></i>
+                        <h3 id="contain-head">High Quality</h3>
+                    </div>
+                    With high quality product available to customers
+                    all over the world.
+                </div>
+
+                <div class="contain">
+                    <div class="icons">
+                        <i class="fa fa-shield" id="icon"></i>
+                        <h3 id="contain-head">Product Safety</h3>
+                    </div>
+                    Products safety is our number one priority, goods
+                    are handled with high care and sustainability.
+                </div>
+
+                <div class="contain">
+                    <div class="icons">
+                        <i class="fa fa-users" id="icon"></i>
+                        <h3 id="contain-head">Customer Satifaction</h3>
+                    </div>
+                    Our Exquisite product are delivered to the door
+                    step of customers with satisfaction.
+                </div>
+            </div>
+        </div>
+        <!-- THe Elites Ends -->
+
+        <!-- Bottom Block -->
+        <footer>
+            <div class="bottom-block">
+                <div class="logo2">
+                    <h5 id="logo-2"><span id="red-logo">A.S.A.P</span>dropship</h5>
+                </div>
+
+                <div class="links">
+                    <h5 id="quick">Quick Links</h5>
+                    <ul>
+                        <a href="#" id="qlink">
+                            <li>About Us</li>
+                        </a>
+                        <a href="#" id="qlink">
+                            <li>Collections</li>
+                        </a>
+                        <a href="#" id="qlink">
+                            <li>Login</li>
+                        </a>
+                        <a href="#" id="qlink">
+                            <li>Register</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="social">
+                    <h5 id="quick">Social Media</h5>
+                    <a href="www.facebook.com" id="social-text" target="_blank">facebook</a>
+                    <a href="www.twitter.com" id="social-text" target="_blank">Twitter</a>
+                    <a href="www.linkedin.com" id="social-text" target="_blank">LinkedIn</a><br>
+                    <a href="www.tiktok.com" id="social-text" target="_blank">Tiktok</a>
+                </div>
+
+                <div class="Message">
+                    <h3 id="me">Send us a Message</h3>
+                    <div class="center">
+                        <textarea name="message" row="4" cols="4" placeholder="Message" id="message-box"
+                            required></textarea>
+                        <a href="#"><button type="submit" class="btn-me">Send</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <h6>A.S.A.P.dropship 2025. All rights reserved</h6>
+        </footer>
+
+        <!-- Bottom block ends -->
+    </div>
+</body>
+
+</html>

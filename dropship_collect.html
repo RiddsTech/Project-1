@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asapdropship collections page</title>
+    <style>
+        :root {
+            --font-family: 'Ebrima';
+            --margin: 80px;
+            --font-size: 15px;
+            --font-color: #FF1E2A;
+            --text-color: rgb(255, 217, 0);
+        }
+
+        * {
+            padding: 0;
+            margin: auto;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            height: 100vh;
+            color: #000;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 0px 10px 0px;
+            gap: 150px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .logo2 {
+            float: left;
+            cursor: pointer;
+        }
+
+        #logo-2 {
+            font-family: var(--font-family);
+            font-size: 20px;
+            color: #000;
+        }
+
+        #red-logo {
+            color: var(--font-color);
+            font-size: 30px;
+        }
+
+        .page {
+            text-decoration: none;
+            color: #494441;
+            font-weight: bold;
+            margin-right: 30px;
+            transition: 1s ease;
+        }
+
+        .page:hover {
+            color: var(--text-color);
+            transition: .5s ease-in-out;
+        }
+
+        .btn1 {
+            padding: 15px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            width: 120px;
+            background: rgb(187, 187, 187);
+            transition: .5s ease;
+        }
+
+        .btn1:hover {
+            background: var(--text-color);
+            transition: .5s ease-in-out;
+        }
+
+        .header {
+            background-image: url(img/top\ background.jpg);
+            background-position: center;
+            background-repeat: none;
+            background-size: cover;
+            width: 100%;
+            height: 350px;
+        }
+
+        .back-head {
+            backdrop-filter: blur(10px);
+        }
+
+        #top {
+            background: var(--font-color);
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+        }
+
+        .block {
+            margin: -100px 50px 0px 50px;
+            background: #fff;
+            border-radius: 15px;
+            height: 500px;
+            padding: 20px;
+            box-shadow: 0px 4px 16px 0px gray;
+            z-index: 1;
+            max-width: 90%;
+        }
+
+        .block2 {
+            margin: 80px 50px 0px 50px;
+            background: #fff;
+            border-radius: 15px;
+            height: 500px;
+            padding: 20px;
+            box-shadow: 0px 4px 16px 0px gray;
+            z-index: 1;
+            max-width: 90%;
+        }
+
+        #sub-head {
+            font-family: var(--font-family);
+            font-size: 40px;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            background-color: var(--text-color);
+            margin-bottom: 20px;
+            height: 2px;
+            border: none;
+        }
+
+        .item-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .item {
+            width: 200px;
+            /* background: #fff; */
+            box-shadow: 0px 4px 8px 0px rgba(128, 128, 128, 0.404);
+            cursor: pointer;
+            padding: 10px;
+            transition: .7s ease;
+        }
+
+        .item:hover {
+            transition: .7s ease-in-out;
+            transform: translateY(-5px);
+        }
+
+        .bag {
+            width: 95%;
+            height: 220px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 8px 0px rgba(128, 128, 128, 0.404);
+        }
+
+        #mark {
+            font-family: var(--font-family);
+            color: gray;
+            margin-bottom: 7px;
+        }
+
+        #list {
+            font-family: cambria;
+            font-size: var(--font-size);
+            margin-bottom: 7px;
+        }
+
+        .pur {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        #price {
+            font-family: cambria;
+            font-size: 20px;
+        }
+
+        .buy {
+            text-decoration: none;
+            padding: 7px 15px;
+            background: var(--font-color);
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .btn3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn-3 {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: .5s ease;
+        }
+
+        #arrow-right {
+            font-size: 20px;
+            color: var(--text-color);
+        }
+
+        .btn-3:hover {
+            transition: .5s ease-in-out;
+            color: #000;
+        }
+
+        .btn4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        #btn-4 {
+            padding: 12px 20px;
+            margin-bottom: 40px;
+            background: var(--font-color);
+            color: #fff;
+            text-decoration: none;
+            font-family: arial;
+            transition: 1s ease;
+            animation-name: zoom;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #btn-4:hover {
+            background: #8f080f;
+            transition: .7s ease-in-out;
+        }
+
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        footer {
+            display: grid;
+            justify-items: center;
+            background: #494441;
+            padding: 30px 0px 0px 0px;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            margin-top: -30px;
+            height: 100px;
+        }
+
+        h6 {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="collect-page">
+        <div class="header">
+            <div class="back-head">
+                <nav>
+                    <div class="logo2">
+                        <h5 id="logo-2"><span id="red-logo">A.S.A.P</span>dropship</h5>
+                    </div>
+                    <div class="menu">
+                        <a href="dropship_home.html" class="page">Home</a>
+                        <a href="dropship_about.html" class="page">About Us</a>
+                        <a href="dropship_collect.html" class="page">Collections</a>
+                        <a href="#" class="page">Login</a>
+                        <a href="#" class="page">Register</a>
+                        <button type="submit" class="btn1">Contact us</button>
+                    </div>
+                </nav>
+
+                <div class="head">
+                    <h2 id="top">Our Collections</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bag Collection -->
+        <div class="block">
+            <h3 id="sub-head">Bags</h3>
+            <hr>
+
+            <div class="item-block">
+                <div class="item">
+                    <img src="img/bag1.jpg" alt="bag image" class="bag">
+                    <p id="mark">High quality Louis Vitton Bag for ladies</p>
+                    <p id="list">List: 49</p>
+                    <div class="pur">
+                        <h5 id="price">$4.99</h5>
+                        <a href="dropship_login.html" class="buy">Buy</a>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <img src="img/bag2.webp" alt="bag image" class="bag">
+                    <p id="mark">High quality Louis Vitton Bag for ladies</p>
+                    <p id="list">List: 49</p>
+                    <div class="pur">
+                        <h5 id="price">$4.99</h5>
+                        <a href="dropship_login.html" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/bag3.jpg" alt="bag image" class="bag">
+                    <p id="mark">High quality Louis Vitton Bag for ladies</p>
+                    <p id="list">List: 49</p>
+                    <div class="pur">
+                        <h5 id="price">$4.99</h5>
+                        <a href="dropship_login.html" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/bag4.jpeg" alt="bag image" class="bag">
+                    <p id="mark">High quality Louis Vitton Bag for ladies</p>
+                    <p id="list">List: 49</p>
+                    <div class="pur">
+                        <h5 id="price">$4.99</h5>
+                        <a href="dropship_login.html" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/bag5.jpeg" alt="bag image" class="bag">
+                    <p id="mark">High quality Louis Vitton Bag for ladies</p>
+                    <p id="list">List: 49</p>
+                    <div class="pur">
+                        <h5 id="price">$4.99</h5>
+                        <a href="dropship_login.html" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn3">
+                <a href="#" class="btn-3">View More</a>
+                <!-- <img src="img/arrow right.svg" alt="arrow icon" id="arrow-right">
+                <i class="fas fa-arrow-right" id="arrow-right"></i> -->
+
+            </div>
+        </div>
+        <!-- Bag collection ends -->
+
+        <!-- Jeweries collection -->
+        <div class="block2">
+            <h3 id="sub-head">Jeweries</h3>
+            <hr>
+
+            <div class="item-block">
+                <div class="item">
+                    <img src="img/Jewel1.jpg" alt="bag image" class="bag">
+                    <p id="mark">Beauty Jewelry for all kinds of occassions</p>
+                    <p id="list">List: 19</p>
+                    <div class="pur">
+                        <h5 id="price">$15.89</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <img src="img/Jewel2.jpg" alt="bag image" class="bag">
+                    <p id="mark">Beauty Jewelry for all kinds of occassions</p>
+                    <p id="list">List: 74</p>
+                    <div class="pur">
+                        <h5 id="price">$15.89</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/Jewel3.jpg" alt="bag image" class="bag">
+                    <p id="mark">Beauty Jewelry for all kinds of occassions</p>
+                    <p id="list">List: 160</p>
+                    <div class="pur">
+                        <h5 id="price">$15.89</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/Jewel4.jpg" alt="bag image" class="bag">
+                    <p id="mark">Beauty Jewelry for all kinds of occassions</p>
+                    <p id="list">List: 235</p>
+                    <div class="pur">
+                        <h5 id="price">$15.89</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/Jewel5.jpg" alt="bag image" class="bag">
+                    <p id="mark">Beauty Jewelry for all kinds of occassions</p>
+                    <p id="list">List: 96</p>
+                    <div class="pur">
+                        <h5 id="price">$15.89</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn3">
+                <a href="#" class="btn-3">View More</a>
+            </div>
+        </div>
+        <!-- Jeweries collection ends -->
+
+
+        <!-- Clothing collection -->
+        <div class="block2">
+            <h3 id="sub-head">Clothing</h3>
+            <hr>
+
+            <div class="item-block">
+                <div class="item">
+                    <img src="img/cloth1.jpg" alt="bag image" class="bag">
+                    <p id="mark">High Quality Clothes for both males and females</p>
+                    <p id="list">List: 12</p>
+                    <div class="pur">
+                        <h5 id="price">$23.67</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <img src="img/cloth2.jpg" alt="bag image" class="bag">
+                    <p id="mark">High Quality Clothes for both males and females</p>
+                    <p id="list">List: 374</p>
+                    <div class="pur">
+                        <h5 id="price">$23.67</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/cloth3.webp" alt="bag image" class="bag">
+                    <p id="mark">High Quality Clothes for both males and females</p>
+                    <p id="list">List: 60</p>
+                    <div class="pur">
+                        <h5 id="price">$23.67</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/cloth4.jpg" alt="bag image" class="bag">
+                    <p id="mark">High Quality Clothes for both males and females</p>
+                    <p id="list">List: 25</p>
+                    <div class="pur">
+                        <h5 id="price">$23.67</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/cloth5.jpg" alt="bag image" class="bag">
+                    <p id="mark">High Quality Clothes for both males and females</p>
+                    <p id="list">List: 108</p>
+                    <div class="pur">
+                        <h5 id="price">$23.67</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn3">
+                <a href="#" class="btn-3">View More</a>
+            </div>
+        </div>
+        <!-- CLothing collection ends -->
+
+
+        <!-- Gadgets collection-->
+        <div class="block2">
+            <h3 id="sub-head">Gadgets</h3>
+            <hr>
+
+            <div class="item-block">
+                <div class="item">
+                    <img src="img/gadget1.jpeg" alt="bag image" class="bag">
+                    <p id="mark">Authentic gadget to fit you everyday vibe</p>
+                    <p id="list">List: 100</p>
+                    <div class="pur">
+                        <h5 id="price">$16.33</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+
+                </div>
+
+                <div class="item">
+                    <img src="img/gadget2.jpg" alt="bag image" class="bag">
+                    <p id="mark">Authentic gadget to fit you everyday vibe</p>
+                    <p id="list">List: 263</p>
+                    <div class="pur">
+                        <h5 id="price">$16.33</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/gadget3.jpg" alt="bag image" class="bag">
+                    <p id="mark">Authentic gadget to fit you everyday vibe</p>
+                    <p id="list">List: 55</p>
+                    <div class="pur">
+                        <h5 id="price">$16.33</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/gadget4.jpg" alt="bag image" class="bag">
+                    <p id="mark">Authentic gadget to fit you everyday vibe</p>
+                    <p id="list">List: 81</p>
+                    <div class="pur">
+                        <h5 id="price">$16.33</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/gadget5.jpeg" alt="bag image" class="bag">
+                    <p id="mark">Authentic gadget to fit you everyday vibe</p>
+                    <p id="list">List: 124</p>
+                    <div class="pur">
+                        <h5 id="price">$16.33</h5>
+                        <a href="#" class="buy">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn3">
+                <a href="#" class="btn-3">View More</a>
+            </div>
+        </div>
+
+        <div class="btn4">
+            <a href="#" id="btn-4">Get More Offer..</a>
+        </div>
+
+        <footer>
+            <div class="logo2">
+                <h5 id="logo-2"><span id="red-logo">A.S.A.P</span>dropship</h5>
+            </div>
+            <h6>A.S.A.P.dropship 2025. All rights reserved</h6>
+        </footer>
+    </div>
+</body>
+
+</html>

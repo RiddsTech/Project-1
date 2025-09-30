@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asapdropship about_us page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        :root {
+            --font-family: 'Ebrima';
+            --margin: 80px;
+            --font-size: 15px;
+            --font-color: #FF1E2A;
+            --text-color: rgb(255, 217, 0);
+        }
+
+        * {
+            padding: 0;
+            margin: auto;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            height: 100vh;
+            color: #000;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 0px 10px 0px;
+            gap: 150px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .logo2 {
+            float: left;
+            cursor: pointer;
+        }
+
+        #logo-2 {
+            font-family: var(--font-family);
+            font-size: 20px;
+            color: #000;
+        }
+
+        #red-logo {
+            color: var(--font-color);
+            font-size: 30px;
+        }
+
+        #red-logo2 {
+            color: var(--font-color);
+            font-size: 80px;
+        }
+
+        .page {
+            text-decoration: none;
+            color: #494441;
+            font-weight: bold;
+            margin-right: 30px;
+            transition: 1s ease;
+        }
+
+        .page:hover {
+            color: var(--text-color);
+            transition: .5s ease-in-out;
+        }
+
+        .btn1 {
+            padding: 15px;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+            width: 120px;
+            background: rgb(187, 187, 187);
+            transition: .5s ease;
+        }
+
+        .btn1:hover {
+            background: var(--text-color);
+            transition: .5s ease-in-out;
+        }
+
+        .intro {
+            background: rgb(224, 224, 224);
+            height: 1050px;
+            width: 100%;
+            padding: 40px 0px 40px 0px;
+        }
+
+        .in-text {
+            margin: 150px 0px 150px 150px;
+        }
+
+        #ab {
+            font-size: 170px;
+            font-family: arial;
+        }
+
+        #ab-down {
+            font-family: var(--font-family);
+            font-size: 60px;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cube {
+            background: #fff;
+            width: 450px;
+            height: 430px;
+            padding: 20px;
+        }
+
+        #illus {
+            margin-right: -10px;
+        }
+
+        #cube-head {
+            font-family: arial;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        #cube-text {
+            font-family: var(--font-family);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        #btn2 {
+            padding: 12px 20px;
+            background: var(--font-color);
+            color: #fff;
+            text-decoration: none;
+            font-family: arial;
+            transition: 1s ease;
+            margin-bottom: 50px;
+        }
+
+        #btn2:hover {
+            background: #8f080f;
+            transition: .7s ease-in-out;
+        }
+
+        .mid {
+            padding: 20px 0px;
+            background: rgb(0, 14, 59);
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        #mid-head {
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        #mid-head2 {
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .mid-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            color: #fff;
+        }
+
+        .box {
+            margin-bottom: 30px;
+        }
+
+        #mid-text1 {
+            font-family: var(--font-family);
+            padding: 5px;
+            border-radius: 15px;
+            width: 320px;
+            height: 150px;
+            background: gray;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: 1s ease;
+        }
+
+        #mid-text2 {
+            font-family: var(--font-family);
+            padding: 5px;
+            border-radius: 15px;
+            width: 320px;
+            height: 150px;
+            background: #8f080f;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: 1s ease;
+        }
+
+        #mid-text3 {
+            font-family: var(--font-family);
+            padding: 5px;
+            border-radius: 15px;
+            width: 320px;
+            height: 150px;
+            background: #1F60DD;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: 1s ease;
+        }
+
+        #mid-sub {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #mid-text1:hover,
+        #mid-text2:hover,
+        #mid-text3:hover {
+            transform: translateY(-7%);
+            transition: 1s ease-in-out;
+            box-shadow: 0px 4px 16px 0px rgba(231, 231, 231, 0.349);
+        }
+
+        #quote {
+            font-family: arial;
+            color: gray;
+            letter-spacing: 1px;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .why {
+            padding: 20px 0px;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        .ideals {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .fact {
+            padding: 10px;
+            width: 300px;
+            height: 150px;
+            box-shadow: 0px 4px 16px 0px rgb(182, 182, 182);
+            font-family: arial;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            transition: .5s ease;
+        }
+
+        .fact:hover {
+            transition: .5s ease-in-out;
+            transform: translateY(-10%);
+        }
+
+        #icon {
+            color: var(--text-color);
+            width: 200px;
+        }
+
+        #topic {
+            font-size: 25px;
+            margin: 15px 0px;
+        }
+
+        #sub-text {
+            color: gray;
+        }
+
+        footer {
+            display: grid;
+            justify-items: center;
+            background: #494441;
+            padding: 30px 0px 0px 0px;
+            border-top-left-radius: 35px;
+            border-top-right-radius: 35px;
+            margin-top: -30px;
+            height: 100px;
+        }
+
+        h6 {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about_us_page">
+
+        <nav>
+            <div class="logo2">
+                <h5 id="logo-2"><span id="red-logo">A.S.A.P</span>dropship</h5>
+            </div>
+            <div class="menu">
+                <a href="dropship_home.html" class="page">Home</a>
+                <a href="dropship_about.html" class="page">About Us</a>
+                <a href="dropship_collect.html" class="page">Collections</a>
+                <a href="#" class="page">Login</a>
+                <a href="#" class="page">Register</a>
+                <button type="submit" class="btn1">Contact us</button>
+            </div>
+        </nav>
+
+        <!-- About Us Start -->
+
+        <div class="intro">
+            <div class="in-text">
+                <h1 id="ab">About Us</h1>
+                <h4 id="ab-down"><span id="red-logo2">A.S.A.P</span>dropship</h4>
+            </div>
+
+            <div class="section">
+                <img src="img/illustrate1.png" alt="illustrative image" id="illus">
+                <div class="cube">
+                    <h4 id="cube-head">Easy and Reliable Delivery</h4>
+                    <p id="cube-text">
+                        We aid and specialize in easy and fast delivery that meet
+                        up with customer demands. Our customers are at peace and
+                        reassured about the safety of their goods and provide them
+                        with high quality products that entice even our competitors
+                        in the market with solid evidence and testimonies. You can
+                        also order a product and get it delivered to your door step
+                        without moving from your place of comfort.
+                    </p>
+
+                    <a href="#" id="btn2">Learn More...</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us End -->
+
+
+        <!-- What we do starts -->
+
+        <div class="mid">
+            <h3 id="mid-head">What We Do</h3>
+
+            <div class="mid-box">
+                <div class="box">
+                    <p id="mid-text2">
+                        <span id="mid-sub">ORDER</span><br>
+                        We provide a service that enables your to order
+                        any product of your choice to be delivered.
+                    </p>
+                </div>
+                <div class="box">
+                    <p id="mid-text1">
+                        <span id="mid-sub">PROCESS</span><br>
+                        We take the order of your desired product and process
+                        it for delivery via mini store or to your door step.
+                    </p>
+                </div>
+                <div class="box">
+                    <p id="mid-text3">
+                        <span id="mid-sub">DELIVER</span><br>
+                        We provide you with the product you ordered to your
+                        comfort zone with your smartphone and internet connection.
+                    </p>
+                </div>
+            </div>
+
+            <a href="#" id="btn2">See More..</a>
+        </div>
+
+        <!-- What we do ends -->
+
+
+        <!-- Why choose us starts -->
+
+        <div class="last">
+            <div class="why">
+                <h3 id="mid-head2">Why Choose Us?</h3>
+                <p id="quote">We offer explicit benefits like...</p>
+
+                <div class="ideals">
+                    <div class="fact">
+                        <i class="fa fa-users" id="icon"></i>
+                        <h4 id="topic">Professional</h4>
+                        <p id="sub-text">
+                            We are considered highly professional in our
+                            line of work and our services are top-notch.
+                        </p>
+                    </div>
+
+                    <div class="fact">
+                        <i class="fa fa-trophy" id="icon"></i>
+                        <h4 id="topic">Expertise</h4>
+                        <p id="sub-text">
+                            We show good proficiency and efficiency in our
+                            packaging and services with high managing values.
+                        </p>
+                    </div>
+
+                    <div class="fact">
+                        <i class="fa fa-star" id="icon"></i>
+                        <h4 id="topic">Quality</h4>
+                        <p id="sub-text">
+                            The product your are served with is of the highest
+                            and best quality available by the manufacturers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ideals">
+                    <div class="fact">
+                        <i class="fa fa-globe" id="icon"></i>
+                        <h4 id="topic">Premium Service</h4>
+                        <p id="sub-text">
+                            Our services are premium and satisfactory with
+                            availability of product in all areas of the market.
+                        </p>
+                    </div>
+
+                    <div class="fact">
+                        <i class="fa fa-shield" id="icon"></i>
+                        <h4 id="topic">Vibrant</h4>
+                        <p id="sub-text">
+                            We provide cool, casual, beauty and attractive products
+                            for all kinds and type of occassions and people.
+                        </p>
+                    </div>
+
+                    <div class="fact">
+                        <i class="fa fa-lock" id="icon"></i>
+                        <h4 id="topic">Honesty & Security</h4>
+                        <p id="sub-text">
+                            Our services and conversation is very secure with
+                            end-to-end encryption in payment services and personal account.
+                        </p>
+                    </div>
+                </div>
+
+                <a href="#" id="btn2">Get Started Now</a>
+            </div>
+        </div>
+
+        <!-- Why choose us ends -->
+         <footer>
+            <div class="logo2">
+                <h5 id="logo-2"><span id="red-logo">A.S.A.P</span>dropship</h5>
+            </div>
+            <h6>A.S.A.P.dropship 2025. All rights reserved</h6>
+        </footer>
+    </div>
+</body>
+
+</html>

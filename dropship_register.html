@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asapdropship register page</title>
+    <style>
+        :root {
+            --font-family: 'Ebrima';
+            --margin: 80px;
+            --font-size: 15px;
+            --font-color: #FF1E2A;
+            --text-color: rgb(255, 217, 0);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            height: 100vh;
+        }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #back-image{
+            width: 825px;
+            height: 697px;
+            margin-top: -10px;
+            margin-left: -20px;
+        }
+
+        form{
+            height: 646px;
+            width: 500px;
+            float: right;
+            padding: 20px;
+        }
+
+        .details{
+            margin: 20px;
+        }
+
+        #reg{
+            font-family: Tahoma;
+            font-size: 40px;
+            margin: 50px 0px 30px 0px;
+            color: var(--font-color);
+        }
+
+        .in{
+            width: 90%;
+            padding: 15px;
+            margin-bottom: 20px;
+            outline: none;
+            border-radius: 20px;
+            border: 1px solid gray;
+        }
+
+        input::-webkit-inner-spin-button,
+        input::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+        }
+        
+        .me{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 160px;
+        }
+
+        .me2{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+
+        #forget{
+            text-decoration: none;
+            color: var(--font-color);
+        }
+
+        .btn5{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-5{
+            padding: 15px;
+            width: 80%;
+            margin-top: 30px;
+            border-radius: 20px;
+            border: none;
+            background: var(--font-color);
+            color: #fff;
+            cursor: pointer;
+            transition: 1s ease;
+        }
+
+        .btn-5:hover{
+            transition: 1s ease-in-out;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="img/Logreg.jpg" alt="background image" id="back-image">
+        <form>
+            <div class="details">
+                <h3 id="reg">Sign Up</h3>
+                <input type="text" name="user" placeholder="Username" label="Please fill in your username" class="in">
+                <input type="text" name="email" placeholder="Email" label="Please fill in your email address" class="in">
+                <input type="number" name="number" placeholder="Phone no" label="Please fill in your Phone number" class="in">
+                <input type="text" name="password" placeholder="Create Password" label="Please fill in your password" class="in">
+                <input type="text" name="password" placeholder="Confirm Password" label="Please fill in the same password" class="in">
+                <div class="me">
+                    <div class="check">
+                        <input type="checkbox" name="check">Remember me
+                    </div>
+                    <a href="#" id="forget">Forget password?</a>
+                </div>
+
+                <div class="btn5">
+                    <button type="button" class="btn-5">Register Account</button>
+                </div>
+                
+                <div class="me2">
+                    <h5>Already have an account?</h5>
+                    <a href="dropship_login.html" id="forget">signin here</a>
+                </div>
+            </div>
+        </form>
+    </section>
+
+</body>
+
+</html>
